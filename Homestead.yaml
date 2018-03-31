@@ -1,0 +1,23 @@
+ip: 192.168.10.10
+memory: 1024
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /Users/scottkeckwarren/Projects/laravelVsSymfony
+        to: /home/vagrant/code
+sites:
+    -
+        map: laravel.test
+        to: /home/vagrant/code/laravel/public
+    -
+        map: symfony.test
+        to: /home/vagrant/code/symfony/public
+databases:
+    - laravel
+    - symfony
+name: laravelvssymfony
+hostname: laravelvssymfony
